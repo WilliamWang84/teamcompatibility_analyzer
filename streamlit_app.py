@@ -4,8 +4,8 @@ import numpy as np
 from dataclasses import dataclass
 from typing import List, Dict, Tuple
 import json
-from langchain_ollama import ChatOllama
-model3 = ChatOllama(model="qwen3:latest")
+#from langchain_ollama import ChatOllama
+#model3 = ChatOllama(model="qwen3:latest")
 
 # Graph representation (base compatibility)
 PERSONALITY_TYPES = [
@@ -222,8 +222,9 @@ def generate_llm_insights(graph: PersonalityGraph, team: List[Person]) -> Tuple[
 
     # 2. Simulate the LLM call
     try:
-        response = model3.invoke(prompt)
-        insights = response.content
+        #response = model3.invoke(prompt)
+        #insights = response.content
+        insights = "Work in progress"
     except Exception as e:
         insights = f"Error calling LLM: {e}"
 
